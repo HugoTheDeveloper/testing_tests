@@ -2,16 +2,15 @@ from scripts.capitalize import capitalize
 
 
 def test_capitalize():
-    if capitalize('hello') != 'Hello':
-        raise Exception('Function works incorrect!')
+    assert capitalize('hello') == 'Hello'
+    # 'Function works incorrect!'
 
-    if capitalize('') != '':
-        raise Exception('Function must work with empty string')
+    assert capitalize('') == ''
 
-    if capitalize(' ask him') != 'Ask him':
-        raise Exception("Function shouldn't strip a string")
+    assert capitalize(' ask him') == 'Ask him'
+    # "Function should strip a string"
+    print('Function works pretty good')
 
 
-test_capitalize()
 if __name__ == '__main__':
     test_capitalize()
